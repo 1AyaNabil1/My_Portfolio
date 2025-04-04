@@ -8,13 +8,16 @@
 
 The component `<LetterGlitch \>` and `<InfiniteMenu \>` were taken from [ReactBits.dev](https://www.reactbits.dev/)
 
-## **Stack** 
-### **Frontend**  
+## **Stack**
+
+### **Frontend**
+
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 
 ## **Project structure**
+
 ```
 public/
 ├── favicons/
@@ -31,15 +34,21 @@ src/
 ```
 
 ## **Local configuration**
+
 1. Clone the repo:
+
 ```
 git clone https://github.com/1AyaNabil1/portfolio
 ```
+
 2. Install dependencies:
+
 ```
 npm install
 ```
+
 3. Start the develpoment server:
+
 ```
 npm run dev
 ```

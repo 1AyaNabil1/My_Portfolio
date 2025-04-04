@@ -5,18 +5,18 @@ export default {
     extend: {
       keyframes: {
         scaleAnim: {
-          '0%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.1)' },
-          '100%': { transform: 'scale(1)' },
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)" },
         },
         shine: {
-          '0%': { 'background-position': '100%' },
-          '100%': { 'background-position': '-100%' },
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
         },
       },
       animation: {
-        shine: 'shine 5s linear infinite',
-        scale: 'scaleAnim 300ms ease-in-out',
+        shine: "shine 5s linear infinite",
+        scale: "scaleAnim 300ms ease-in-out",
       },
     },
   },

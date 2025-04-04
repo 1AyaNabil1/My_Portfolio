@@ -29,7 +29,7 @@ const Folder: React.FC<FolderProps> = ({
 
   const [open, setOpen] = useState(false);
   const [paperOffsets, setPaperOffsets] = useState<{ x: number; y: number }[]>(
-    Array.from({ length: maxItems }, () => ({ x: 0, y: 0 }))
+    Array.from({ length: maxItems }, () => ({ x: 0, y: 0 })),
   );
 
   const folderBackColor = "#18181b";
@@ -48,7 +48,7 @@ const Folder: React.FC<FolderProps> = ({
 
   const handlePaperMouseMove = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    index: number
+    index: number,
   ) => {
     if (!open) return;
     const rect = e.currentTarget.getBoundingClientRect();
@@ -65,7 +65,7 @@ const Folder: React.FC<FolderProps> = ({
 
   const handlePaperMouseLeave = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    index: number
+    index: number,
   ) => {
     setPaperOffsets((prev) => {
       const newOffsets = [...prev];
@@ -106,8 +106,9 @@ const Folder: React.FC<FolderProps> = ({
           </div>
         )}
         <div
-          className={`group relative transition-all duration-200 ease-in cursor-pointer ${!open ? "hover:-translate-y-2" : ""
-            }`}
+          className={`group relative transition-all duration-200 ease-in cursor-pointer ${
+            !open ? "hover:-translate-y-2" : ""
+          }`}
           style={{
             ...folderStyle,
             transform: open ? "translateY(-8px)" : undefined,
@@ -126,9 +127,12 @@ const Folder: React.FC<FolderProps> = ({
             ></span>
             {imageItems.map((img, i) => {
               let sizeClasses = "";
-              if (i === 0) sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[80%]";
-              if (i === 1) sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[80%]";
-              if (i === 2) sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[80%]";
+              if (i === 0)
+                sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[80%]";
+              if (i === 1)
+                sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[80%]";
+              if (i === 2)
+                sizeClasses = open ? "w-[90%] h-[80%]" : "w-[90%] h-[80%]";
 
               const transformStyle = open
                 ? `${getOpenTransform(i)} translate(${paperOffsets[i].x}px, ${paperOffsets[i].y}px)`
@@ -140,13 +144,15 @@ const Folder: React.FC<FolderProps> = ({
                   onMouseMove={(e) => handlePaperMouseMove(e, i)}
                   onMouseLeave={(e) => handlePaperMouseLeave(e, i)}
                   className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out shadow-sm border border-zinc-400 rounded-md ring-1 ring-zinc-200/20 overflow-hidden
-                    ${!open
-                      ? "transform -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
-                      : "hover:scale-110"
+                    ${
+                      !open
+                        ? "transform -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
+                        : "hover:scale-110"
                     } ${sizeClasses}`}
                   style={{
                     ...(!open ? {} : { transform: transformStyle }),
-                    backgroundColor: i === 0 ? paper1 : i === 1 ? paper2 : paper3,
+                    backgroundColor:
+                      i === 0 ? paper1 : i === 1 ? paper2 : paper3,
                   }}
                 >
                   {img && (
@@ -160,16 +166,18 @@ const Folder: React.FC<FolderProps> = ({
               );
             })}
             <div
-              className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out rounded-md border border-zinc-400 ring-1 ring-zinc-200/20 ${!open ? "group-hover:[transform:skew(15deg)_scaleY(0.6)]" : ""
-                }`}
+              className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out rounded-md border border-zinc-400 ring-1 ring-zinc-200/20 ${
+                !open ? "group-hover:[transform:skew(15deg)_scaleY(0.6)]" : ""
+              }`}
               style={{
                 backgroundColor: color,
                 ...(open && { transform: "skew(15deg) scaleY(0.6)" }),
               }}
             ></div>
             <div
-              className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out rounded-md border border-zinc-400 ring-1 ring-zinc-200/20 ${!open ? "group-hover:[transform:skew(-15deg)_scaleY(0.6)]" : ""
-                }`}
+              className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out rounded-md border border-zinc-400 ring-1 ring-zinc-200/20 ${
+                !open ? "group-hover:[transform:skew(-15deg)_scaleY(0.6)]" : ""
+              }`}
               style={{
                 backgroundColor: color,
                 ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
@@ -180,10 +188,7 @@ const Folder: React.FC<FolderProps> = ({
       </div>
       {label && (
         <span className="text-zinc-400 text-[10px] font-medium">
-          <ShinyText
-            text={label}
-            disabled={false}
-          />
+          <ShinyText text={label} disabled={false} />
         </span>
       )}
     </div>

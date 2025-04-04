@@ -141,11 +141,11 @@ export default function Aurora(props: AuroraProps) {
     gl.clearColor(0, 0, 0, 0);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
-    gl.canvas.style.position = 'absolute';
-    gl.canvas.style.top = '0';
-    gl.canvas.style.left = '0';
-    gl.canvas.style.width = '100%';
-    gl.canvas.style.height = '100%';
+    gl.canvas.style.position = "absolute";
+    gl.canvas.style.top = "0";
+    gl.canvas.style.left = "0";
+    gl.canvas.style.width = "100%";
+    gl.canvas.style.height = "100%";
     gl.canvas.style.backgroundColor = "transparent";
 
     let program: Program | undefined;
@@ -218,14 +218,14 @@ export default function Aurora(props: AuroraProps) {
   }, [amplitude]);
 
   return (
-    <div 
-      ref={ctnDom} 
-      className="w-screen h-screen fixed inset-0" 
-      style={{ 
-        mixBlendMode: 'screen', 
-        pointerEvents: 'none',
-        opacity: 0.8 
-      }} 
+    <div
+      ref={ctnDom}
+      className="w-screen h-screen fixed inset-0"
+      style={{
+        mixBlendMode: "screen",
+        pointerEvents: "none",
+        opacity: 0.8,
+      }}
     />
   );
 }

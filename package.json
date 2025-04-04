@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@astrojs/react": "^4.2.3",
     "@astrojs/tailwind": "^6.0.2",
     "@types/react": "^19.1.0",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "astro": "^4.0.0"
   }
 }

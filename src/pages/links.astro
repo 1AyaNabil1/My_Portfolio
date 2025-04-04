@@ -1,0 +1,91 @@
+---
+import InfiniteMenu from "../React/InfiniteMenu";
+
+const items = [
+  {
+    title: "Website",
+    description: "Wow I have a website.",
+    link: "http://arpy8.com/",
+    image: "/icons/globe.png",
+  },
+  {
+    title: "Linkedin",
+    description: "Need job.",
+    link: "https://www.linkedin.com/in/aya-nabil-202781247/",
+    image: "/icons/linkedin.png",
+  },
+  {
+    title: "Github",
+    description: "This is where my code lives.",
+    link: "https://github.com/1AyaNabil1",
+    image: "/icons/github.png",
+  },
+  {
+    title: "Gmail",
+    description: "Consider sending a mail.",
+    link: "mailto:ayanabil297@gmail.com",
+    image: "/icons/mail.png",
+  },
+  {
+    title: "Insta",
+    description: "Might post some cool stuff here.",
+    link: "https://www.instagram.com/read.w.aya/",
+    image: "/icons/instagram.png",
+  },
+  {
+    title: "Youtube",
+    description: "Yup I have a channel.",
+    link: "https://www.youtube.com/@aianabil4279",
+    image: "/icons/youtube.png",
+  },
+  {
+    title: "Omdena",
+    description: "I am a Chapter Lead as well!",
+    link: "https://collaborator.omdena.com/dashboard/profile/",
+    image: "/icons/omdena.jpg",
+  },
+  {
+    title: "Leetcode",
+    description: "Did some competitive programming earlier.",
+    link: "https://leetcode.com/u/ayanabil297/",
+    image: "/icons/leetcode.webp",
+  },
+  {
+    title: "HackerRank",
+    description: "Did some competitive programming earlier.",
+    link: "https://www.hackerrank.com/profile/ayanabil297",
+    image: "/icons/hackerrank.png",
+  },
+  {
+    title: "HuggingFace",
+    description: "I mostly use this for API deployment.",
+    link: "https://hf.co/AyaNabil111",
+    image: "/icons/huggingface.svg",
+  },
+  {
+    title: "Spotify",
+    description: "Get to know my music taste.",
+    link: "https://open.spotify.com/user/31skznrai4e7mpjznyzgygzzvrfi?si=a4ce8b9e1b134dfd",
+    image: "/icons/spotify.webp",
+  },
+  {
+    title: "Letterboxd",
+    description: "I rate movies here (sometimes).",
+    link: "https://letterboxd.com/AyaNabil/,
+    image: "/icons/letterboxd.svg",
+  }
+];
+---
+
+<head>
+  <title>Arpit Sengar | Gallery</title>
+  <link rel="icon" href="/favicons/main.ico" />
+</head>
+<section
+  id="links"
+  class="border-[#ffffff10] text-white bg-[#101010] w-full h-screen"
+>
+  <div class="w-full h-full bg-[#101010]">
+    <InfiniteMenu client:load items={items} />
+  </div>
+</section>

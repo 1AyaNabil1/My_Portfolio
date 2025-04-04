@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/react": "^4.2.3",
@@ -11,7 +12,9 @@
     "@types/react-dom": "^19.1.1",
     "astro": "^4.0.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "format": "prettier --write ."
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
   }
 }
